@@ -1,4 +1,16 @@
+import {
+  AppBar,
+  Avatar,
+  Box,
+  Button,
+  IconButton,
+  Toolbar,
+  Typography,
+} from "@mui/material";
+import { deepOrange } from "@mui/material/colors";
+import { Container } from "@mui/system";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -9,91 +21,110 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <nav className="flex" aria-label="Breadcrumb">
-        <ol className="inline-flex items-center space-x-1 md:space-x-3">
-          <li className="inline-flex items-center">
-            <a
-              href="#"
-              className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
-            >
-              <svg
-                aria-hidden="true"
-                className="w-4 h-4 mr-2"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-              </svg>
-              Home
-            </a>
-          </li>
-          <li>
-            <div className="flex items-center">
-              <svg
-                aria-hidden="true"
-                className="w-6 h-6 text-gray-400"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <a
-                href="#"
-                className="ml-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ml-2 dark:text-gray-400 dark:hover:text-white"
-              >
-                Projects
-              </a>
-            </div>
-          </li>
-          <li aria-current="page">
-            <div className="flex items-center">
-              <svg
-                aria-hidden="true"
-                className="w-6 h-6 text-gray-400"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span className="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400">
-                Flowbite
-              </span>
-            </div>
-          </li>
-        </ol>
-      </nav>
-      <button
-        type="button"
-        className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-      >
-        Purple to Blue
-      </button>
-      <button
-        type="button"
-        className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-      >
-        Cyan to Blue
-      </button>
-      <button
-        type="button"
-        className="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-      >
-        Green to Blue
-      </button>
-
-      <h1 className="text-3xl font-bold underline">Hello World!</h1>
+      <AppBar position="fixed" sx={{ background: "rgba(26,30,46,.5)" }}>
+        <Toolbar sx={{ maxWidth: "780px", width: "100%", margin: "0 auto" }}>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+            <Avatar sx={{ bgcolor: deepOrange[500] }}>K</Avatar>
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+      <Container>
+        <Typography>Kisuke is a software developer</Typography>
+        <Link href={"/"}>Read more</Link>
+        <Box sx={{ marginTop: "3rem" }} />
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: "repeat(2,1fr)",
+            gap: "1.5rem",
+          }}
+        >
+          <Button
+            sx={{
+              background: "linear-gradient(0,#9761a9,#4a4f9c)",
+              borderRadius: "22px",
+              boxShadow: "0 20px 40px -16px rgba(0,0,0,.4)",
+              aspectRatio: "1/1",
+              color: "white",
+            }}
+          >
+            TimeLine
+          </Button>
+          <Button
+            sx={{
+              background: "linear-gradient(-5deg,#479aa5,#5473cb 60%,#3e509d)",
+              borderRadius: "22px",
+              boxShadow: "0 20px 40px -16px rgba(0,0,0,.4)",
+              aspectRatio: "1/1",
+              color: "white",
+            }}
+          >
+            Portfolio
+          </Button>
+        </Box>
+        <Box sx={{ marginTop: "1rem" }} />
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4,1fr)",
+            gap: "1.5rem",
+          }}
+        >
+          <Button
+            sx={{
+              background:
+                "linear-gradient(144deg,#84d0ff,#19a7ff 50%,#1da1f2 60%,#1a7ee9)",
+              borderRadius: "22px",
+              boxShadow: "0 20px 40px -16px rgba(0,0,0,.4)",
+              aspectRatio: "1/1",
+              color: "white",
+            }}
+          >
+            Twitter
+          </Button>
+          <Button
+            sx={{
+              background: "linear-gradient(144deg,#fff,#c3cbff 60%,#af99ff)",
+              borderRadius: "22px",
+              boxShadow: "0 20px 40px -16px rgba(0,0,0,.4)",
+              aspectRatio: "1/1",
+              color: "white",
+            }}
+          >
+            GitHub
+          </Button>
+          <Button
+            sx={{
+              background: "linear-gradient(144deg,#fff,#b8d3ff 70%,#8fceff)",
+              borderRadius: "22px",
+              boxShadow: "0 20px 40px -16px rgba(0,0,0,.4)",
+              aspectRatio: "1/1",
+              color: "white",
+            }}
+          >
+            Zenn
+          </Button>
+          <Button
+            sx={{
+              background:
+                "linear-gradient(150deg,#acccff,#83a0ff 30%,#9773ff,#e85af9)",
+              borderRadius: "22px",
+              boxShadow: "0 20px 40px -16px rgba(0,0,0,.4)",
+              aspectRatio: "1/1",
+              color: "white",
+            }}
+          >
+            Other
+          </Button>
+        </Box>
+        <Box sx={{ marginTop: "300rem" }} />
+      </Container>
     </>
   );
 }
