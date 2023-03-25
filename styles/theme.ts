@@ -3,25 +3,25 @@ import { createTheme } from '@mui/material'
 export const theme = createTheme({
   palette: {
     background: {
-      default: '#1a1e2e',
+      default: '#b6d9c9',
     },
   },
   typography: {
     body1: {
-      color: 'rgba(228,232,250,.55)',
+      color: 'rgba(6,4,0,.55)',
     },
     subtitle1: {
-      color: '#fff',
+      color: '#060400',
     },
     h1: {
-      color: '#fff',
+      color: '#060400',
       fontSize: '2.2rem',
       margin: '0',
       lineHeight: '1.4',
       fontWeight: '700',
     },
     h2: {
-      color: '#fff',
+      color: '#060400',
       fontSize: '1.3rem',
       margin: '0',
       lineHeight: '1.4',

@@ -36,7 +36,7 @@ export default function Home() {
         >
           <Button
             sx={{
-              background: 'linear-gradient(0,#9761a9,#4a4f9c)',
+              background: 'linear-gradient(0, rgba(253, 219, 146, 1), rgba(209, 253, 254, 1))',
               borderRadius: '22px',
               boxShadow: '0 20px 40px -16px rgba(0,0,0,.4)',
               aspectRatio: '1/1',
@@ -45,12 +45,12 @@ export default function Home() {
             }}
             onClick={() => router.push('timeline')}
           >
-            <TimelineIcon sx={{ width: '60%', height: '60%', color: 'white' }} />
+            <TimelineIcon sx={{ width: '60%', height: '60%', color: '#060400' }} />
             <Typography variant='h2'>Timeline</Typography>
           </Button>
           <Button
             sx={{
-              background: 'linear-gradient(-5deg,#479aa5,#5473cb 60%,#3e509d)',
+              background: 'linear-gradient(0, rgba(226, 207, 255, 1), rgba(251, 253, 191, 1))',
               borderRadius: '22px',
               boxShadow: '0 20px 40px -16px rgba(0,0,0,.4)',
               aspectRatio: '1/1',
@@ -59,7 +59,7 @@ export default function Home() {
             }}
             onClick={() => router.push('portfolio')}
           >
-            <BrushIcon sx={{ width: '60%', height: '60%', color: 'white' }} />
+            <BrushIcon sx={{ width: '60%', height: '60%', color: '#060400' }} />
             <Typography variant='h2'>Portfolio</Typography>
           </Button>
         </Box>
@@ -87,7 +87,7 @@ export default function Home() {
           </Button>
           <Button
             sx={{
-              background: 'linear-gradient(144deg,#fff,#c3cbff 60%,#af99ff)',
+              background: 'linear-gradient(90deg, rgba(229, 162, 255, 1), rgba(152, 233, 157, 1))',
               borderRadius: '22px',
               boxShadow: '0 20px 40px -16px rgba(0,0,0,.4)',
               aspectRatio: '1/1',
@@ -98,7 +98,7 @@ export default function Home() {
           </Button>
           <Button
             sx={{
-              background: 'linear-gradient(150deg,#acccff,#83a0ff 30%,#9773ff,#e85af9)',
+              background: 'linear-gradient(90deg, rgba(253, 177, 170, 1), rgba(240, 226, 226, 1))',
               borderRadius: '22px',
               boxShadow: '0 20px 40px -16px rgba(0,0,0,.4)',
               aspectRatio: '1/1',
@@ -107,8 +107,8 @@ export default function Home() {
             }}
             onClick={() => router.push('about')}
           >
-            <FaceIcon sx={{ width: '40%', height: '40%', color: 'white' }} />
-            <Typography sx={{ color: 'white' }}>About me</Typography>
+            <FaceIcon sx={{ width: '40%', height: '40%', color: '#060400' }} />
+            <Typography sx={{ color: '#060400' }}>About me</Typography>
           </Button>
         </Box>
         <Box sx={{ marginTop: '3rem' }} />

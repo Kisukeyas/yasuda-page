@@ -33,7 +33,7 @@ const YearTimelineBox: FC<Props> = ({ year }) => {
             top: '10px',
             bottom: '0',
             width: '2px',
-            background: 'rgba(232,231,255,.09)',
+            background: 'rgba(6,4,0,.5)',
           },
           '@media (max-width:425px)': {
             marginTop: '1rem',
@@ -49,7 +49,7 @@ const YearTimelineBox: FC<Props> = ({ year }) => {
               path={item.path}
               publishedAt={publishedDate.format('MMM DD')}
             >
-              <Typography sx={{ color: 'white', fontWeight: '700' }}>{item.title}</Typography>
+              <Typography sx={{ color: '#060400', fontWeight: '700' }}>{item.title}</Typography>
               <Typography sx={{ fontSize: '.88em', marginTop: '0.6rem' }}>
                 {publishedDate.format('MMM DD, YYYY')}
                 {` liked Count ${item.likedCount}`}

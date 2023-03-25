@@ -11,7 +11,6 @@ import {
   Toolbar,
   Typography,
 } from '@mui/material'
-import { deepOrange } from '@mui/material/colors'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useCallback, useEffect, useState } from 'react'
@@ -59,7 +58,7 @@ function Header() {
     event.stopPropagation()
   }
   return (
-    <AppBar position='fixed' sx={{ background: 'rgba(26,30,46,.5)' }}>
+    <AppBar position='fixed' sx={{ background: 'rgba(182,217,201, .5)' }}>
       <Toolbar sx={{ maxWidth: '780px', width: '100%', margin: '0 auto' }}>
         <IconButton
           size='large'
@@ -69,14 +68,14 @@ function Header() {
           sx={{ mr: 2 }}
           onClick={() => router.push('/')}
         >
-          <Avatar sx={{ bgcolor: deepOrange[500] }}>K</Avatar>
+          <Avatar sx={{ bg: 'linear-gradient(#ffbc47,#ff7c4c)' }} src={'/images/avatar/dog1.png'} />
         </IconButton>
-        <Breadcrumbs aria-label='breadcrumb' sx={{ color: 'rgba(228,232,250,.55)' }}>
-          <Link style={{ color: '#fff', textDecoration: 'none' }} href='/'>
+        <Breadcrumbs aria-label='breadcrumb' sx={{ color: 'rgba(6,4,0,.55)' }}>
+          <Link style={{ color: '#060400', textDecoration: 'none' }} href='/'>
             KisukeYas
           </Link>
           {router.pathname.replace('/', '') !== '' && (
-            <Typography sx={{ fontWeight: '500', color: '#fff' }}>
+            <Typography sx={{ fontWeight: '500', color: '#060400' }}>
               {
                 selectHeaderPathName[
                   router.pathname.replace('/', '') as 'timeline' | 'portfolio' | 'about'
@@ -88,11 +87,11 @@ function Header() {
         <Box sx={{ position: 'relative' }}>
           {isOpenMenu ? (
             <IconButton onClick={() => closeModal}>
-              <KeyboardArrowUpIcon style={{ color: 'white' }} />
+              <KeyboardArrowUpIcon style={{ color: '#060400' }} />
             </IconButton>
           ) : (
             <IconButton onClick={(event) => handleClick(event)}>
-              <KeyboardArrowDownIcon style={{ color: 'white' }} />
+              <KeyboardArrowDownIcon style={{ color: '#060400' }} />
             </IconButton>
           )}
           {isOpenMenu && (
@@ -103,7 +102,7 @@ function Header() {
                 left: '-40px',
                 top: '40px',
                 width: '140px',
-                background: '#2b3047',
+                background: '#eeebda',
                 borderRadius: '12px',
                 padding: '6px',
                 fontSize: '.95rem',
@@ -122,8 +121,8 @@ function Header() {
                     width: '100%',
                     color:
                       router.pathname.replace('/', '') === item.pathName
-                        ? 'white'
-                        : 'rgba(228,232,250,.55)',
+                        ? '#060400'
+                        : 'rgba(6,4,0,.55)',
                     textDecoration: 'none',
                     textAlign: 'left',
                   }}

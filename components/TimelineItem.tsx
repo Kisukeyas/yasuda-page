@@ -28,7 +28,7 @@ const TimelineItem: FC<Props> = ({ children, publishedAt, path }) => {
           top: '2px',
           left: '-9px',
           backgroundColor: '#4f536a',
-          border: '4px solid #1a1e2e',
+          border: '4px solid #b6d9c9',
         }}
       ></Box>
       <Typography
@@ -44,7 +44,7 @@ const TimelineItem: FC<Props> = ({ children, publishedAt, path }) => {
           zIndex: '2',
           fontSize: '.95rem',
           borderRadius: '14px',
-          background: '#2b3047',
+          background: '#eeebda',
           boxShadow: '0 1px 2px rgba(0,0,0,.1)',
           textDecoration: 'none',
           marginTop: '1rem',
