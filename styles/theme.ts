@@ -40,6 +40,8 @@ export const theme = createTheme({
           },
           maxWidth: '780px',
           marginTop: '4rem',
+          paddingLeft: '24px',
+          paddingRight: '24px',
         },
       },
     },
