@@ -1,8 +1,7 @@
-import { AppBar, Avatar, Box, Button, IconButton, Toolbar, Typography } from '@mui/material'
-import { deepOrange } from '@mui/material/colors'
-import { Container } from '@mui/system'
+import { Box, Button, Container, Typography } from '@mui/material'
 import Head from 'next/head'
 import Link from 'next/link'
+import Header from '@/components/Header'
 
 export default function Home() {
   return (
@@ -13,20 +12,19 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <AppBar position='fixed' sx={{ background: 'rgba(26,30,46,.5)' }}>
-        <Toolbar sx={{ maxWidth: '780px', width: '100%', margin: '0 auto' }}>
-          <IconButton size='large' edge='start' color='inherit' aria-label='menu' sx={{ mr: 2 }}>
-            <Avatar sx={{ bgcolor: deepOrange[500] }}>K</Avatar>
-          </IconButton>
-        </Toolbar>
-      </AppBar>
+      <Header />
       <Container>
         <Typography>Kisuke is a software developer</Typography>
-        <Link href={'/'}>Read more</Link>
+        <Link href={'/'} style={{ color: '#fff', textDecoration: 'none' }}>
+          Read more
+        </Link>
         <Box sx={{ marginTop: '3rem' }} />
         <Box
           sx={{
             display: 'grid',
+            '@media (max-width:425px)': {
+              gridTemplateColumns: 'repeat(1,1fr)',
+            },
             gridTemplateColumns: 'repeat(2,1fr)',
             gap: '1.5rem',
           }}
@@ -37,8 +35,8 @@ export default function Home() {
               borderRadius: '22px',
               boxShadow: '0 20px 40px -16px rgba(0,0,0,.4)',
               aspectRatio: '1/1',
-              color: 'white',
             }}
+            href={'timeline'}
           >
             TimeLine
           </Button>
@@ -48,16 +46,18 @@ export default function Home() {
               borderRadius: '22px',
               boxShadow: '0 20px 40px -16px rgba(0,0,0,.4)',
               aspectRatio: '1/1',
-              color: 'white',
             }}
           >
             Portfolio
           </Button>
         </Box>
-        <Box sx={{ marginTop: '1rem' }} />
+        <Box sx={{ marginTop: '1.5rem' }} />
         <Box
           sx={{
             display: 'grid',
+            '@media (max-width:425px)': {
+              gridTemplateColumns: 'repeat(2,1fr)',
+            },
             gridTemplateColumns: 'repeat(4,1fr)',
             gap: '1.5rem',
           }}
@@ -68,7 +68,6 @@ export default function Home() {
               borderRadius: '22px',
               boxShadow: '0 20px 40px -16px rgba(0,0,0,.4)',
               aspectRatio: '1/1',
-              color: 'white',
             }}
           >
             Twitter
@@ -79,7 +78,6 @@ export default function Home() {
               borderRadius: '22px',
               boxShadow: '0 20px 40px -16px rgba(0,0,0,.4)',
               aspectRatio: '1/1',
-              color: 'white',
             }}
           >
             GitHub
@@ -90,7 +88,6 @@ export default function Home() {
               borderRadius: '22px',
               boxShadow: '0 20px 40px -16px rgba(0,0,0,.4)',
               aspectRatio: '1/1',
-              color: 'white',
             }}
           >
             Zenn
@@ -101,7 +98,6 @@ export default function Home() {
               borderRadius: '22px',
               boxShadow: '0 20px 40px -16px rgba(0,0,0,.4)',
               aspectRatio: '1/1',
-              color: 'white',
             }}
           >
             Other
