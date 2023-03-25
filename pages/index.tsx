@@ -1,9 +1,11 @@
 import { Box, Button, Container, Typography } from '@mui/material'
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import Header from '@/components/Header'
 
 export default function Home() {
+  const router = useRouter()
   return (
     <>
       <Head>
@@ -36,7 +38,7 @@ export default function Home() {
               boxShadow: '0 20px 40px -16px rgba(0,0,0,.4)',
               aspectRatio: '1/1',
             }}
-            href={'timeline'}
+            onClick={() => router.push('timeline')}
           >
             TimeLine
           </Button>
