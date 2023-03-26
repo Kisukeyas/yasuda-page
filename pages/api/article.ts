@@ -1,14 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiHandler, NextApiRequest, NextApiResponse } from 'next'
 import prisma from '@/lib/prisma'
-
-interface ResponseData {
-  id: number
-  title: string
-  likedCount: number
-  path: string
-  publishedAt: string
-}
+import { ResponseData } from '@/@type/article-data.interface'
 
 const handler: NextApiHandler = async (
   req: NextApiRequest,
@@ -19,11 +12,9 @@ const handler: NextApiHandler = async (
       id: true,
       title: true,
       likedCount: true,
+      publishedYear: true,
       path: true,
       publishedAt: true,
-    },
-    where: {
-      publishedYear: req.query.publishedYear as string,
     },
     orderBy: {
       publishedAt: 'desc',

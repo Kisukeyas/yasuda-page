@@ -2,14 +2,14 @@ import { Box, Typography } from '@mui/material'
 import dayjs from 'dayjs'
 import React, { FC } from 'react'
 import TimelineItem from '@/components/TimelineItem'
-import { useArticleData } from '@/hooks/useArticleData'
+import { ResponseData } from '@/@type/article-data.interface'
 
 interface Props {
+  data: ResponseData[]
   year: string
 }
 
-const YearTimelineBox: FC<Props> = ({ year }) => {
-  const { data } = useArticleData(year)
+const YearTimelineBox: FC<Props> = ({ data, year }) => {
   return (
     <Box
       sx={{
