@@ -20,7 +20,7 @@ function Portfolio() {
           },
         }}
       >
-        <Card sx={{ maxWidth: 345, bgcolor: '#eeebda' }}>
+        <Card sx={{ maxWidth: 345, bgcolor: '#eeebda', borderRadius: '1rem' }}>
           <CardActionArea onClick={() => router.push('https://line-clone-f6ad4.web.app/')}>
             <CardMedia
               component='img'
@@ -42,7 +42,7 @@ function Portfolio() {
             </CardContent>
           </CardActionArea>
         </Card>
-        <Card sx={{ maxWidth: 345, bgcolor: '#eeebda' }}>
+        <Card sx={{ maxWidth: 345, bgcolor: '#eeebda', borderRadius: '1rem' }}>
           <CardActionArea
             onClick={() => router.push('https://react-todo-app-20221011.netlify.app/')}
           >
