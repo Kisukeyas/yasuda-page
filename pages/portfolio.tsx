@@ -20,7 +20,42 @@ function Portfolio() {
           },
         }}
       >
-        <Card sx={{ maxWidth: 345, bgcolor: '#eeebda', borderRadius: '1rem' }}>
+        <Card
+          sx={{
+            maxWidth: 345,
+            bgcolor: '#eeebda',
+            borderRadius: '1rem',
+            border: '1px solid rgba(6,4,0, .5)',
+          }}
+        >
+          <CardActionArea onClick={() => router.push('https://kisuke-yas.vercel.app/')}>
+            <CardMedia
+              component='img'
+              height='140'
+              image='/images/portfolio/kisuke-yas.png'
+              alt='line-clone-ss'
+            />
+            <CardContent>
+              <Typography gutterBottom variant='h5' component='div'>
+                My Home Page(kisuke-yas)
+              </Typography>
+              <Typography variant='body2' color='text.secondary'>
+                自分のサイトが作りたかったので、作成しました。Next.jsとVercelを用いてSPAを作成。Timelineページを作成するためにSupabaseを使用。記事データはISRをを使用しています。
+              </Typography>
+              <Typography variant='body2' color='text.secondary'>
+                使用技術: MUI/Next.js/vercel/Supabase
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        <Card
+          sx={{
+            maxWidth: 345,
+            bgcolor: '#eeebda',
+            borderRadius: '1rem',
+            border: '1px solid rgba(6,4,0, .5)',
+          }}
+        >
           <CardActionArea onClick={() => router.push('https://line-clone-f6ad4.web.app/')}>
             <CardMedia
               component='img'
@@ -38,29 +73,6 @@ function Portfolio() {
               </Typography>
               <Typography variant='body2' color='text.secondary'>
                 使用技術: Firebase/FirebaseAuth/React
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ maxWidth: 345, bgcolor: '#eeebda', borderRadius: '1rem' }}>
-          <CardActionArea
-            onClick={() => router.push('https://react-todo-app-20221011.netlify.app/')}
-          >
-            <CardMedia
-              component='img'
-              height='140'
-              image='/images/portfolio/todo-app.png'
-              alt='line-clone-ss'
-            />
-            <CardContent>
-              <Typography gutterBottom variant='h5' component='div'>
-                Todo App
-              </Typography>
-              <Typography variant='body2' color='text.secondary'>
-                ReactとMUIの勉強のために作成しました。編集機能とValidationもついています。
-              </Typography>
-              <Typography variant='body2' color='text.secondary'>
-                使用技術: React/MUI
               </Typography>
             </CardContent>
           </CardActionArea>
