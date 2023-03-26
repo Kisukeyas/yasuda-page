@@ -3,7 +3,6 @@ import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import YearTimelineBox from '@/components/YearTimelineBox'
 import { GetStaticProps, NextPage } from 'next'
-import { getArticle } from '@/handler/getArticles'
 import { ResponseData } from '@/@type/article-data.interface'
 
 type Props = {
@@ -11,7 +10,7 @@ type Props = {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const posts = await getArticle()
+  const posts = await (await fetch(`${process.env.API_PATH}/api/article`)).json()
   return {
     props: {
       posts,
